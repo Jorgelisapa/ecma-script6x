@@ -104,9 +104,7 @@ console.log(a);
 
 // Class: Arrow functions, Promises, Parameters in objects - v4
 
-
 // ENHANCED OBJECT PROPERTY
-
 
 let name = 'Jorge';
 let age = 32;
@@ -165,3 +163,48 @@ helloPromise()
     .then(response => console.log(response))
     .then(() => console.log('hola'))
     .catch(error => console.log(error))
+
+
+
+
+    // Class: Classes, modules, generators - v5
+    // Clases: con ellas tenemos una sintaxis mas clara para manejar objetos y la herencia dentro de JS.
+
+    class calculator {
+        constructor() {
+            this.valueA = 0;
+            this. valueB = 0;
+        }
+        sum(valueA, valueB) {
+            this.valueA = valueA;
+            this.valueB = valueB;
+            return this.valueA + this.valueB;
+        }
+    }
+
+    const calc = new calculator();
+    console.log(calc.sum(3, 2));
+
+
+
+    //IMPORT AND EXṔORT
+    // ver: module.js
+
+
+
+    // GENERATORS - es6x
+// Es una funcion especial: function*
+// Optimo para solucionar fibonachi
+    function* helloWorld() {
+        if (true) {
+            yield 'hello';
+        }
+        if (true) {
+            yield 'World';
+        }
+    };
+
+    const generatorHello = helloWorld();
+    console.log(generatorHello.next().value);
+    console.log(generatorHello.next().value);
+    console.log(generatorHello.next().value);
