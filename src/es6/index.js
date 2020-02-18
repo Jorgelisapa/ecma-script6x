@@ -98,3 +98,70 @@ console.log(a);
 const a = 'b';
 a = 'a';
 console.log(a);
+
+
+
+
+// Class: Arrow functions, Promises, Parameters in objects - v4
+
+
+// ENHANCED OBJECT PROPERTY
+
+
+let name = 'Jorge';
+let age = 32;
+// Before with es5x...
+obj = {name: name, age: age };
+console.log(obj)
+
+// Now with es6x...
+obj2 = { name, age };
+console.log(obj2)
+
+
+
+// ARROW FUNCTIONS
+// Sintaxis mas reducida y this no vinculable.
+
+const name = [
+    {name: 'Jorge', age: 32, country: 'COL'},
+    {name: 'Adriana', age: 23, country: 'COL'},
+    {name: 'Banzell', age: 9, country: 'COL'}
+]
+
+let listOfNames = name.map(function (item) {
+    console.log(item.name);
+})
+
+// Now with es6x...
+let listOfNames2 = name.map(item => console.log(item.name));
+
+// or
+const listOfNames3 = (name, age, country) => {
+    ... //Code
+}
+
+// Cuando paso un solo elemento
+const listOfNames4 = name => {
+    ... //Code
+}
+// Aún más amigable
+const square = num => num * num;
+
+
+
+// PROMISES
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+if (true) {
+    resolve ('Hey, thats great!')
+} else {
+    reject ('Oooh! Nooo')
+}
+    })
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hola'))
+    .catch(error => console.log(error))
