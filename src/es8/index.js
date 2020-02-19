@@ -47,7 +47,7 @@ const helloWorld = () => {
  return new Promise((resolve, reject) => {
      (true)  //or false
         ? setTimeout(() => resolve('Hello World'), 3000)
-        : reject(new Error('Test error'))
+        : reject(new Error('This is an error'))
  })
 };
 
